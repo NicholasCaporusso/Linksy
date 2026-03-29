@@ -1,0 +1,5 @@
+node_modules
+dist/bundle
+dist/payload
+native/**/bin/**
+native/**/obj/**

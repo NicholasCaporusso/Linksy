@@ -1,0 +1,49 @@
+{
+  "name": "linksy",
+  "version": "1.0.0",
+  "description": "Linksy is a local Windows helper that opens files and folders in Explorer from a localhost URL.",
+  "main": "app.js",
+  "type": "commonjs",
+  "bin": "app.js",
+  "scripts": {
+    "start": "node app.js serve",
+    "copy-url": "node cli.js copy",
+    "print-url": "node cli.js print",
+    "install-context-menu": "powershell -ExecutionPolicy Bypass -File .\\scripts\\install-context-menu.ps1",
+    "uninstall-context-menu": "powershell -ExecutionPolicy Bypass -File .\\scripts\\uninstall-context-menu.ps1",
+    "build:focus-helper": "powershell -ExecutionPolicy Bypass -File .\\scripts\\build-focus-helper.ps1",
+    "build:app-exe": "powershell -ExecutionPolicy Bypass -File .\\scripts\\build-app-exe.ps1",
+    "build:exe": "npm run build:release",
+    "build:windows-tools": "powershell -ExecutionPolicy Bypass -File .\\scripts\\build-windows-tools.ps1",
+    "build:bundle": "powershell -ExecutionPolicy Bypass -File .\\scripts\\stage-release-bundle.ps1",
+    "build:release": "npm run build:focus-helper && npm run build:app-exe && npm run build:windows-tools && npm run build:bundle"
+  },
+  "pkg": {
+    "assets": [
+      "icon.ico",
+      "doc/icon.png",
+      "scripts/copy-link-hidden.vbs",
+      "scripts/focus-explorer.vbs"
+    ],
+    "scripts": [
+      "app.js",
+      "cli.js",
+      "server.js",
+      "lib/**/*.js"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "dist"
+  },
+  "keywords": [
+    "notion",
+    "windows",
+    "explorer",
+    "localhost"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
