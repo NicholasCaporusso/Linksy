@@ -2,6 +2,13 @@
 
 Linksy is a local Windows helper that turns file and folder paths into localhost URLs you can paste into Notion and other apps. When you click a Linksy link on the same machine, Linksy opens the target in Explorer and tries to bring the Explorer window to the foreground.
 
+**1. Access through context menu**
+<img width="287" height="396" alt="image" src="https://github.com/user-attachments/assets/af1921a2-4aa0-4282-8fcc-5a94fee06177" />
+**2. Paste into Notion**
+<img width="647" height="222" alt="image" src="https://github.com/user-attachments/assets/a3bbbb7b-4c65-4837-8d5d-7b06549b07f0" />
+**3. Open as a folder (Explorer dialog)**
+<img width="800" height="350" alt="image" src="https://github.com/user-attachments/assets/d9dac185-fc28-476d-a3cd-536765c468f0" />
+
 ## Overview
 
 Linksy has four main pieces:
@@ -137,6 +144,7 @@ What it adds:
 - Right-click a folder: copies a Linksy URL for that folder
 - Right-click the blank background inside a folder: copies a Linksy URL for the current folder path
 
+<img width="287" height="396" alt="image" src="https://github.com/user-attachments/assets/af1921a2-4aa0-4282-8fcc-5a94fee06177" />
 The context menu uses:
 
 - label: `Get Linksy link`
