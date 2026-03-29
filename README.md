@@ -150,6 +150,7 @@ What it adds:
 - Right-click the blank background inside a folder: copies a Linksy URL for the current folder path
 
 <img width="287" height="396" alt="image" src="https://github.com/user-attachments/assets/af1921a2-4aa0-4282-8fcc-5a94fee06177" />
+
 The context menu uses:
 
 - label: `Get Linksy link`
